@@ -29,7 +29,7 @@ function Signup() {
     setError("");
     try {
       const { data } = await axios.post(
-        "https://mohit-s-ai.onrender.com",
+        "https://mohit-s-ai.onrender.com/api/v1/user/signup",
         {
           firstName: formData.firstName,
           lastName: formData.lastName,
