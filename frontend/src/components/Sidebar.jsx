@@ -32,7 +32,7 @@ function Sidebar({ onClose }) {
 
   const handleLogout = async () => {
     try {
-      const { data } = await axios.get("https://mohit-s-ai.onrender.com", {
+      const { data } = await axios.get("https://mohit-s-ai.onrender.com/api/v1/user/logout", {
         withCredentials: true,
       });
 
