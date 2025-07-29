@@ -3,6 +3,7 @@ import { LogOut, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
 import axios from "axios";
+import { baseURL } from "../config/utils";
 
 function Sidebar({ onClose }) {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function Sidebar({ onClose }) {
 
   const handleLogout = async () => {
     try {
-      const { data } = await axios.get("https://mohit-s-ai.onrender.com/api/v1/user/logout", {
+      const { data } = await axios.get(`${baseURL}/user/logout`, {
         withCredentials: true,
       });
 
