@@ -88,7 +88,7 @@ function Promt() {
       {/* ➤ Greeting Section */}
       <div className="mt-8 md:mt-16 text-center">
         <div className="flex items-center justify-center gap-2">
-          <img src={logo} alt="DeepSeek Logo" className="h-6 md:h-8" />
+          <img src={logo} alt="Mohit's AI" className="h-6 md:h-8" />
           <h1 className="text-2xl md:text-3xl font-semibold text-white mb-2">
             Hey, I'm Mohit's AI.
           </h1>
