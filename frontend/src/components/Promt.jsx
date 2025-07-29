@@ -48,7 +48,7 @@ function Promt() {
       const token = localStorage.getItem("token");
 
       const { data } = await axios.post(
-        "https://mohit-s-ai.onrender.com",
+        "https://mohit-s-ai.onrender.com/api/v1/mohitai/promt",
         { content: trimmed },
         {
           headers: {
