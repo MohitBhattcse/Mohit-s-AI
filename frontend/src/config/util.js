@@ -1,1 +1,1 @@
-export const baseURL = "https://mohit-s-ai.onrender.com/api/v1";
+export const baseURL = "https://mohit-s-ai.onrender.com/";
