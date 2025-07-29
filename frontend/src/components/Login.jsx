@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthProvider";
+import { baseURL } from "../config/utils";
+
 function Login() {
   const [formData, setFormData] = useState({
     email: "",
@@ -30,7 +32,7 @@ function Login() {
     setError("");
     try {
       const { data } = await axios.post(
-        "https://mohit-s-ai.onrender.com/api/v1/user/login",
+        `${baseURL}/user/login`,
         {
           email: formData.email,
           password: formData.password,
