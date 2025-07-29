@@ -30,7 +30,7 @@ function Login() {
     setError("");
     try {
       const { data } = await axios.post(
-        "http://localhost:4002/api/v1/user/login",
+        "https://mohit-s-ai.onrender.com",
         {
           email: formData.email,
           password: formData.password,
