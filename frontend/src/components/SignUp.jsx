@@ -2,6 +2,7 @@ import { Eye } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { baseURL } from "../config/utils";
 function Signup() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -29,7 +30,7 @@ function Signup() {
     setError("");
     try {
       const { data } = await axios.post(
-        "https://mohit-s-ai.onrender.com/api/v1/user/signup",
+        `${baseURL}/user/signup`,
         {
           firstName: formData.firstName,
           lastName: formData.lastName,
