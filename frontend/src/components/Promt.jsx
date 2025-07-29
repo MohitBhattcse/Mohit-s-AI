@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow as codeTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { baseURL } from "../config/utils";
 
 function Promt() {
   const [inputValue, setInputValue] = useState("");
@@ -48,7 +49,7 @@ function Promt() {
       const token = localStorage.getItem("token");
 
       const { data } = await axios.post(
-        "https://mohit-s-ai.onrender.com/api/v1/mohitai/promt",
+        `${baseURL}/mohitai/promt`,
         { content: trimmed },
         {
           headers: {
