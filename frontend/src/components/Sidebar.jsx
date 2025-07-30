@@ -3,7 +3,11 @@ import { LogOut, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
 import axios from "axios";
+<<<<<<< HEAD
 import { BASEURL } from "../config/util";
+=======
+import { baseURL } from "../config/utils";
+>>>>>>> 1978d69e4bd999ebe47bf43d629a18a75aae05e8
 
 function Sidebar({ onClose }) {
   const navigate = useNavigate();
@@ -33,7 +37,11 @@ function Sidebar({ onClose }) {
 
   const handleLogout = async () => {
     try {
+<<<<<<< HEAD
       const { data } = await axios.get(`${BASEURL}/user/logout`, {
+=======
+      const { data } = await axios.get(`${baseURL}/user/logout`, {
+>>>>>>> 1978d69e4bd999ebe47bf43d629a18a75aae05e8
         withCredentials: true,
       });
 

@@ -6,7 +6,12 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow as codeTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
+<<<<<<< HEAD
 import { BASEURL } from "../config/util";
+=======
+import { baseURL } from "../config/utils";
+
+>>>>>>> 1978d69e4bd999ebe47bf43d629a18a75aae05e8
 function Promt() {
   const [inputValue, setInputValue] = useState("");
   const [typeMessage, setTypeMessage] = useState("");
@@ -48,7 +53,7 @@ function Promt() {
       const token = localStorage.getItem("token");
 
       const { data } = await axios.post(
-        "http://localhost:4002/api/v1/mohitai/promt",
+        `${baseURL}/mohitai/promt`,
         { content: trimmed },
         {
           headers: {
@@ -88,7 +93,7 @@ function Promt() {
       {/* ➤ Greeting Section */}
       <div className="mt-8 md:mt-16 text-center">
         <div className="flex items-center justify-center gap-2">
-          <img src={logo} alt="DeepSeek Logo" className="h-6 md:h-8" />
+          <img src={logo} alt="Mohit's AI" className="h-6 md:h-8" />
           <h1 className="text-2xl md:text-3xl font-semibold text-white mb-2">
             Hi, I'm Mohit's AI.
           </h1>

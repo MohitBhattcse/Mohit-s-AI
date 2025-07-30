@@ -3,7 +3,12 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthProvider";
+<<<<<<< HEAD
 import { BASEURL } from "../config/util";
+=======
+import { baseURL } from "../config/utils";
+
+>>>>>>> 1978d69e4bd999ebe47bf43d629a18a75aae05e8
 function Login() {
   const [formData, setFormData] = useState({
     email: "",
@@ -32,7 +37,11 @@ const [showPassword, setShowPassword] = useState(false);
     setError("");
     try {
       const { data } = await axios.post(
+<<<<<<< HEAD
         `${BASEURL}/user/login`,
+=======
+        `${baseURL}/user/login`,
+>>>>>>> 1978d69e4bd999ebe47bf43d629a18a75aae05e8
         {
           email: formData.email,
           password: formData.password,

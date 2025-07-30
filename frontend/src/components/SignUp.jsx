@@ -2,7 +2,11 @@ import { Eye } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+<<<<<<< HEAD
 import { BASEURL } from "../config/util";
+=======
+import { baseURL } from "../config/utils";
+>>>>>>> 1978d69e4bd999ebe47bf43d629a18a75aae05e8
 function Signup() {
 
   const [formData, setFormData] = useState({
@@ -32,7 +36,11 @@ const [showPassword, setShowPassword] = useState(false);
     setError("");
     try {
       const { data } = await axios.post(
+<<<<<<< HEAD
         `${BASEURL}/user/signup`,
+=======
+        `${baseURL}/user/signup`,
+>>>>>>> 1978d69e4bd999ebe47bf43d629a18a75aae05e8
         {
           firstName: formData.firstName,
           lastName: formData.lastName,
