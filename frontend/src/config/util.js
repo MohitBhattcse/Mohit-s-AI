@@ -1,0 +1,1 @@
+export const BASEURL = "https://mohit-s-ai.onrender.com/api/v1"

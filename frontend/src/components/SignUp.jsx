@@ -2,13 +2,16 @@ import { Eye } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BASEURL } from "../config/util";
 function Signup() {
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
   });
+const [showPassword, setShowPassword] = useState(false);
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -29,7 +32,7 @@ function Signup() {
     setError("");
     try {
       const { data } = await axios.post(
-        "http://localhost:4002/api/v1/user/signup",
+        `${BASEURL}/user/signup`,
         {
           firstName: formData.firstName,
           lastName: formData.lastName,
@@ -98,13 +101,13 @@ function Signup() {
         <div className="mb-4 mt-2 relative">
           <input
             className="w-full bg-transparent border border-gray-600 rounded-md px-4 py-3 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#7a6ff0]"
-            type="password"
+             type={showPassword ? "text" : "password"}
             name="password"
             placeholder="password"
             value={formData.password}
             onChange={handleChange}
           />
-          <span className=" absolute right-3 top-3 text-gray-400">
+          <span className=" absolute right-3 top-3 text-gray-400" onClick={() => setShowPassword(prev => !prev)}> 
             {" "}
             <Eye size={18} />{" "}
           </span>

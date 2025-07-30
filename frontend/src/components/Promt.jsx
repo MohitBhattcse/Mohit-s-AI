@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow as codeTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
-
+import { BASEURL } from "../config/util";
 function Promt() {
   const [inputValue, setInputValue] = useState("");
   const [typeMessage, setTypeMessage] = useState("");
@@ -90,11 +90,11 @@ function Promt() {
         <div className="flex items-center justify-center gap-2">
           <img src={logo} alt="DeepSeek Logo" className="h-6 md:h-8" />
           <h1 className="text-2xl md:text-3xl font-semibold text-white mb-2">
-            Hey, I'm Mohit's AI.
+            Hi, I'm Mohit's AI.
           </h1>
         </div>
         <p className="text-gray-400 text-base md:text-sm mt-2">
-          💬 Let's generate some new content?
+          💬 LET'S CREATE SOMETHING TOGETHER?
         </p>
       </div>
 
@@ -175,7 +175,7 @@ function Promt() {
         <div className="bg-[#2f2f2f] rounded-[2rem] px-4 md:px-6 py-6 md:py-8 shadow-md">
           <input
             type="text"
-            placeholder="💬 Message Mohit's AI"
+            placeholder="💬 Message DeepSeek"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyDown}
